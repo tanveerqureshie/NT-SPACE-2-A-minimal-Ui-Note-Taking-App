@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply transition-colors duration-200;
+  }
+  
+  body {
+    @apply bg-cream-50 text-dark-700 antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-cream-100;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-dark-300 rounded-full hover:bg-dark-400 transition-colors;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-lg;
+  }
+  
+  .cream-card {
+    @apply bg-cream-50 border border-cream-200 shadow-sm hover:shadow-md transition-all duration-300;
+  }
+  
+  .btn-cream {
+    @apply px-6 py-2.5 bg-dark-700 text-cream-50 rounded-lg hover:bg-dark-600 
+           transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98]
+           shadow-sm hover:shadow-md font-medium;
+  }
+  
+  .btn-cream-outline {
+    @apply px-6 py-2.5 border-2 border-dark-700 text-dark-700 rounded-lg 
+           hover:bg-dark-700 hover:text-cream-50 transition-all duration-300
+           transform hover:scale-[1.02] active:scale-[0.98] font-medium;
+  }
+  
+  .input-cream {
+    @apply w-full px-4 py-3 bg-cream-50 border border-cream-200 rounded-lg
+           focus:outline-none focus:ring-2 focus:ring-dark-300 focus:border-transparent
+           transition-all duration-300 text-dark-700 placeholder-dark-400;
+  }
+  
+  .textarea-cream {
+    @apply w-full px-4 py-3 bg-cream-50 border border-cream-200 rounded-lg
+           focus:outline-none focus:ring-2 focus:ring-dark-300 focus:border-transparent
+           transition-all duration-300 text-dark-700 placeholder-dark-400 resize-none;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
