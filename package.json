@@ -1,8 +1,32 @@
 {
-  "dependencies": {
-    "@upstash/ratelimit": "^2.0.5",
-    "@upstash/redis": "^1.34.9",
-    "react-hot-toast": "^2.6.0",
-    "react-router": "^8.0.1"
-  }
+  "name": "mern-thinkboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MERN Stack Note Taking App",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "build": "npm run build --prefix frontend",
+    "install-all": "npm install --prefix backend && npm install --prefix frontend",
+    "start": "npm run start --prefix backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanveerqureshie/NT-SPACE-2-A-minimal-Ui-Note-Taking-App.git"
+  },
+  "keywords": [
+    "mern",
+    "react",
+    "express",
+    "mongodb",
+    "notes"
+  ],
+  "author": "Tanveer Qureshi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tanveerqureshie/NT-SPACE-2-A-minimal-Ui-Note-Taking-App/issues"
+  },
+  "homepage": "https://github.com/tanveerqureshie/NT-SPACE-2-A-minimal-Ui-Note-Taking-App#readme"
 }
